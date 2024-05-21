@@ -29,7 +29,6 @@ var szinek = {
 
 var kezdoTabla = [];
 var megoldottTabla = [];
-
 var valtoSzam;
 
 async function getBoard(){
