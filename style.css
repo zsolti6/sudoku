@@ -1,0 +1,78 @@
+body{
+        background-color: aqua;
+}
+
+h1{
+        color: navy;
+        font-size: 3rem;
+        text-align: center;
+}
+
+#kontener{
+        background-color: white;
+        border: 1px solid black;
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        margin-top: 140px;
+        border-radius: 10px;
+}
+
+#tabla{
+        background-color: white;
+        width: 488px;
+        height: 488px;
+        margin: auto;
+        margin-top: 7px;
+}
+
+.tile{
+        background-color: lightgrey;
+        color: blue;
+}
+
+#valaszto{
+        margin: auto;
+        background-color: white;
+        width: 163px;
+        height: 163px;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-top: 20px;
+}
+
+.tile, .valasztoTile{
+        width: 50px;
+        height: 50px;
+        float: left;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 2px;
+        font-size: 2rem;
+        font-family: Fantasy;
+        user-select: none;
+}
+
+.valasztoTile{
+        background-color: greenyellow;
+        color: blue;
+}
+
+#magyarazat{
+        border: 1px solid black;
+        float: left;
+        background-color: green;
+        border-radius: 10px;
+        width: 350px;
+        text-align: center;
+}
+
+p, p a{
+        color: white;
+}
+
+a:any-link{
+        text-decoration: underline;
+        color: white;
+}
