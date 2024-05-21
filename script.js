@@ -17,12 +17,12 @@ var indexek = {
 
 var szinek = {
         "0|0": "orange",
-        "0|1": "brown",
-        "0|2": "green",
+        "0|1": "oceanblue",
+        "0|2": "blue",
         "1|0": "aqua",
         "1|1": "pink",
         "1|2": "gold",
-        "2|0": "darkred",
+        "2|0": "yellow",
         "2|1": "lightgrey",
         "2|2": "purple"
 }
@@ -83,6 +83,8 @@ function tileClick(e){
                 return;
         }
         if(tile.classList.contains("ures")){
+                tile.classList.remove("helyes");
+                tile.classList.remove("helytelen");
                 if(parseInt(tile.innerText) == valtoSzam){
                         kezdoTabla[tile.id[0]][tile.id[1]] = 0;
                         tile.innerText = "";
@@ -91,9 +93,22 @@ function tileClick(e){
                         tile.innerText = valtoSzam;
                 }
         }
-        
         if(winCheck()){
-                alert("Sikeresen megoldottad!");
+                alert("Gratulálunk, minden szám helyes!");
+        }
+}
+
+function ellenoriz(){
+        for(var i = 0; i < 9; i++){
+                for(var j = 0; j < 9; j++){
+                        if(kezdoTabla[i][j] != megoldottTabla[i][j] && kezdoTabla[i][j] != 0){
+                                document.getElementById(`${i}${j}`).classList.remove("helyes");
+                                document.getElementById(`${i}${j}`).classList.add("helytelen");
+                        }else if(kezdoTabla[i][j] != 0){
+                                document.getElementById(`${i}${j}`).classList.remove("helytelen");
+                                document.getElementById(`${i}${j}`).classList.add("helyes");
+                        }
+                }
         }
 }
 
